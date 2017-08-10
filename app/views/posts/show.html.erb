@@ -7,15 +7,15 @@
                         <div class="post-box">
                             <div class="post-head">
                                 <h6 class="post-name"><%= "#{@post.user.first_name} #{@post.user.last_name}" %></h6>
-                                <span class="likes">
-                                    <%= @post.interactions["likes"] %> Likes | 
+                                <span class="likes" style="margin-left: 7px">
+                                    <%= @post.interactions["likes"] %> Likes
                                 </span>
 
-                                <span class="hearts">
-                                    <%= @post.interactions["hearts"] %> Hearts | 
+                                <span class="hearts" style="margin-left: 7px">
+                                    <%= @post.interactions["hearts"] %> Hearts
                                 </span>
 
-                                <span class="dislikes">
+                                <span class="dislikes" style="margin-left: 7px">
                                     <%= @post.interactions["dislikes"] %> Dislikes
                                 </span>
                             </div>
@@ -54,15 +54,15 @@
                                         <h6 class="comment-name">
                                             <%= "#{preview.user.first_name} #{preview.user.last_name}" %>
                                             <div>
-                                                <span class="likes">
-                                                    <%= preview.comment.interactions["likes"] %> Likes | 
+                                                <span class="likes" style="margin-left: 7px">
+                                                    <%= preview.comment.interactions["likes"] %> Likes
                                                 </span>
 
-                                                <span class="hearts">
-                                                    <%= preview.comment.interactions["hearts"] %> Hearts | 
+                                                <span class="hearts" style="margin-left: 7px">
+                                                    <%= preview.comment.interactions["hearts"] %> Hearts
                                                 </span>
 
-                                                <span class="dislikes">
+                                                <span class="dislikes" style="margin-left: 7px">
                                                     <%= preview.comment.interactions["dislikes"] %> Dislikes
                                                 </span>
                                             </div>
@@ -76,11 +76,13 @@
                         </li>
 
                         <ul style="display: none" class="comments-list reply-list" id="<%= preview.id %>-reply">
+                            <h3>Replies</h3>
+
                             <% preview.comment.replies.each do |reply| %>
                                 <li>
                                     <div class="comment-box">
                                         <div class="comment-head">
-                                            <h6 class="comment-name"><a href="#"><%= "#{reply.user.first_name} #{reply.user.last_name}" %> - Reply</a></h6>
+                                            <h6 class="comment-name"><%= "#{reply.user.first_name} #{reply.user.last_name}" %></h6>
                                         </div>
                                         <div class="comment-content">
                                             <%= reply.message %>
