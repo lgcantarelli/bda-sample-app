@@ -1,1 +1,10 @@
-index.html.erb
+<div class="container">
+	<% @posts.each do |post| %>
+	    <div class="row">
+	        <div class="titulo  "><h4><strong><%= link_to post.title, post_path(post) %> </div></h4>
+	        <div class="col-md-12 post-header-line">
+	            <span class="glyphicon glyphicon-user"></span>by <%= "#{post.user.first_name} #{post.user.last_name}" %> | <%= post.interactions["likes"] %> Likes | <%= post.interactions["hearts"] %> Hearts | <%= post.interactions["dislikes"] %> Dislikes
+	        </div>
+	    </div>
+	<% end %>
+</div>
