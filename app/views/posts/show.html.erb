@@ -34,7 +34,7 @@
                             <div class="comment-main-level">
                                 <div class="comment-box">
                                     <div class="comment-head">
-                                        <h6 class="comment-name by-author">
+                                        <h6 class="comment-name">
                                             <%= "#{preview.user.first_name} #{preview.user.last_name}" %>
                                         </h6>
 
@@ -51,8 +51,21 @@
                             <div class="comment-main-level">
                                 <div class="comment-box">
                                     <div class="comment-head">
-                                        <h6 class="comment-name by-author">
+                                        <h6 class="comment-name">
                                             <%= "#{preview.user.first_name} #{preview.user.last_name}" %>
+                                            <div>
+                                                <span class="likes">
+                                                    <%= preview.comment.interactions["likes"] %> Likes | 
+                                                </span>
+
+                                                <span class="hearts">
+                                                    <%= preview.comment.interactions["hearts"] %> Hearts | 
+                                                </span>
+
+                                                <span class="dislikes">
+                                                    <%= preview.comment.interactions["dislikes"] %> Dislikes
+                                                </span>
+                                            </div>
                                         </h6>
                                     </div>
                                     <div class="comment-content">

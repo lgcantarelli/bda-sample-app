@@ -9,7 +9,7 @@
 # 		post = Post.create({
 # 			user_id: user.id,
 # 	  	title: Faker::Name.title,
-# 	  	body:  Faker::Lorem.paragraph(6, false, 3),
+# 	  	body:  Faker::Lorem.paragraph(9, false, 4),
 # 	  	interactions: {
 # 	  		likes:  	 Faker::Number.between(1, 250),
 # 	  		hearts: 	 Faker::Number.between(1, 100),
@@ -29,7 +29,7 @@
 # 		if comment_owner && replier
 # 			comment = post.comments.create({
 # 				user_id: comment_owner._id,
-# 				message: Faker::Lorem.paragraph(2, false, 1),
+# 				message: Faker::Lorem.paragraph(5, false, 2),
 # 				interactions: {
 # 		  		likes:  	 Faker::Number.between(1, 50),
 # 		  		hearts: 	 Faker::Number.between(1, 30),
