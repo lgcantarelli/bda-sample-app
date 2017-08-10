@@ -1,4 +1,4 @@
-# 250.times do |i|
+# 350.times do |i|
 # 	user = User.create({
 # 		first_name: Faker::Name.unique.first_name,
 # 		last_name:  Faker::Name.last_name,
@@ -9,7 +9,7 @@
 # 		post = Post.create({
 # 			user_id: user.id,
 # 	  	title: Faker::Name.title,
-# 	  	body:  Faker::Lorem.paragraph(9, false, 4),
+# 	  	body:  Faker::Lorem.paragraph(12, false, 5),
 # 	  	interactions: {
 # 	  		likes:  	 Faker::Number.between(1, 250),
 # 	  		hearts: 	 Faker::Number.between(1, 100),
@@ -22,9 +22,9 @@
 # users = User.all
 
 # Post.all.each do |post|
-# 	rand(8..16).times do
-# 		comment_owner = users[rand(1..250)]
-# 		replier       = users[rand(1..250)]
+# 	rand(15..30).times do
+# 		comment_owner = users[rand(1..350)]
+# 		replier       = users[rand(1..350)]
 
 # 		if comment_owner && replier
 # 			comment = post.comments.create({
@@ -47,7 +47,7 @@
 # 			comment_preview = post.comment_previews.create({
 # 				user_id: comment_owner._id,
 # 				comment_id: comment.id,
-# 				message: Faker::Lorem.sentence
+# 				message: Faker::Lorem.sentence + ".."
 # 			})
 # 		end
 # 	end
